@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Threads</string>
+    <string name="label_button_thread">Thread Esempio</string>
+    <string name="label_button_asynctask">AsyncTask Esempio</string>
+    <string name="label_button_handlerthread">HandlerThread Esempio</string>
+    <string name="label_button_service">Service Esempio</string>
 </resources>
