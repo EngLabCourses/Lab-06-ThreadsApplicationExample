@@ -7,6 +7,12 @@
     tools:context="it.englab.androidcourse.threads.MainActivity">
 
     <Button
+        android:id="@+id/button_anr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/label_button_anr" />
+
+    <Button
         android:id="@+id/button_thread"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
