@@ -37,7 +37,6 @@ public class ThreadActivity extends AppCompatActivity {
                 try {
                     Thread.sleep(15000);
                     Toast.makeText(getApplicationContext(), "Il nostro fantastico codice ha finito!", Toast.LENGTH_SHORT).show();
-                    runOnUiThread(new );
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
