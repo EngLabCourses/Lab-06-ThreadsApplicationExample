@@ -2,11 +2,11 @@ package it.englab.androidcourse.threads;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
 import it.englab.androidcourse.threads.anr.ANRActivity;
+import it.englab.androidcourse.threads.asynctask.AsyncTaskActivity;
 import it.englab.androidcourse.threads.thread.ThreadActivity;
 
 public class MainActivity extends Activity {
@@ -27,6 +27,13 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, ThreadActivity.class));
+            }
+        });
+
+        findViewById(R.id.button_asynctask).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, AsyncTaskActivity.class));
             }
         });
     }
