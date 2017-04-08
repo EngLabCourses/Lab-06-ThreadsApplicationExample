@@ -58,6 +58,7 @@ class MyAsyncTask extends AsyncTask<Integer, Integer, String> {
 
     @Override
     protected void onCancelled() {
+        mCallaback = null;
         super.onCancelled();
     }
 

@@ -49,8 +49,8 @@ public class AsyncTaskActivity extends AppCompatActivity implements MyAsyncTask.
 
     @Override
     protected void onDestroy() {
-        super.onDestroy();
         mMyAsyncTask = null;
+        super.onDestroy();
     }
 
     private void asyncTaskExample() {
