@@ -18,7 +18,8 @@
         </activity>
         <activity android:name=".thread.ThreadActivity" />
         <activity android:name=".anr.ANRActivity" />
-        <activity android:name=".asynctask.AsyncTaskActivity"></activity>
+        <activity android:name=".asynctask.AsyncTaskActivity" />
+        <activity android:name=".handlerthread.HandlerThreadActivity" />
     </application>
 
 </manifest>

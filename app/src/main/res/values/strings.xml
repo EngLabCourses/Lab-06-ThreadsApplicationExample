@@ -7,4 +7,5 @@
     <string name="label_button_service">Service Esempio</string>
     <string name="label_button_do_other_stuff">Fai altro!</string>
     <string name="label_button_start_work">Inizia lavoro…</string>
+    <string name="label_button_save_configuration">Salva configurazione…</string>
 </resources>
