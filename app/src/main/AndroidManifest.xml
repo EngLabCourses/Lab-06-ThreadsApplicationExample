@@ -20,6 +20,7 @@
         <activity android:name=".anr.ANRActivity" />
         <activity android:name=".asynctask.AsyncTaskActivity" />
         <activity android:name=".handlerthread.HandlerThreadActivity" />
+        <activity android:name=".service.ServiceActivity"></activity>
     </application>
 
 </manifest>
