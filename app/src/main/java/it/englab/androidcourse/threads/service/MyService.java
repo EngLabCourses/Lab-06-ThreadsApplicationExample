@@ -20,6 +20,11 @@ public class MyService extends Service {
     }
 
     @Override
+    public void onCreate() {
+        super.onCreate();
+    }
+
+    @Override
     public IBinder onBind(Intent intent) {
         // TODO: Return the communication channel to the service.
         throw new UnsupportedOperationException("Not yet implemented");
@@ -36,6 +41,11 @@ public class MyService extends Service {
                 break;
         }
         return START_NOT_STICKY;
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
     }
 
     private void anrExample() {
