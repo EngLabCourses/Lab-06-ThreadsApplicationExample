@@ -13,6 +13,7 @@ import android.view.View;
 import it.englab.androidcourse.threads.anr.ANRActivity;
 import it.englab.androidcourse.threads.asynctask.AsyncTaskActivity;
 import it.englab.androidcourse.threads.handlerthread.HandlerThreadActivity;
+import it.englab.androidcourse.threads.service.ServiceActivity;
 import it.englab.androidcourse.threads.thread.ThreadActivity;
 
 public class MainActivity extends Activity {
@@ -47,6 +48,13 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, HandlerThreadActivity.class));
+            }
+        });
+
+        findViewById(R.id.button_service).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, ServiceActivity.class));
             }
         });
 
