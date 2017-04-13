@@ -66,6 +66,6 @@ public class AsyncTaskActivity extends AppCompatActivity implements MyAsyncTask.
 
     @Override
     public void onTaskComplete(String status) {
-        Toast.makeText(this, "Il nostro lavoro in backgound è stato completato con stauts [" + status + "]", Toast.LENGTH_LONG).show();
+        Toast.makeText(this, "Il nostro lavoro in background è stato completato con status [" + status + "]", Toast.LENGTH_LONG).show();
     }
 }
