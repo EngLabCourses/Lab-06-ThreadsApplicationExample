@@ -18,6 +18,7 @@ public class ServiceActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startServiceANR();
+                //startIntentService();
             }
         });
         findViewById(R.id.button_secondary).setOnClickListener(new View.OnClickListener() {
@@ -33,6 +34,6 @@ public class ServiceActivity extends AppCompatActivity {
     }
 
     private void startIntentService() {
-        MyIntentService.startAction(this, "param1");
+        MyIntentService.startAction(this, 3000L);
     }
 }

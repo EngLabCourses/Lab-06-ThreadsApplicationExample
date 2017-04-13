@@ -3,6 +3,7 @@ package it.englab.androidcourse.threads.service;
 import android.app.IntentService;
 import android.content.Context;
 import android.content.Intent;
+import android.util.Log;
 
 /**
  * An {@link IntentService} subclass for handling asynchronous task requests in
@@ -10,8 +11,8 @@ import android.content.Intent;
  */
 public class MyIntentService extends IntentService {
     private static final String ACTION_START = "it.englab.androidcourse.threads.service.action.START";
-
-    private static final String EXTRA_PARAM1 = "it.englab.androidcourse.threads.service.extra.PARAM1";
+    private static final String EXTRA_PARAM_WORK_LENGHT = "it.englab.androidcourse.threads.service.extra.WORKLENGHT";
+    private static final String TAG = MyIntentService.class.getName();
 
     public MyIntentService() {
         super("MyIntentService");
@@ -23,10 +24,10 @@ public class MyIntentService extends IntentService {
      *
      * @see IntentService
      */
-    public static void startAction(Context context, String param1) {
+    public static void startAction(Context context, long millis) {
         Intent intent = new Intent(context, MyIntentService.class);
         intent.setAction(ACTION_START);
-        intent.putExtra(EXTRA_PARAM1, param1);
+        intent.putExtra(EXTRA_PARAM_WORK_LENGHT, millis);
         context.startService(intent);
     }
 
@@ -35,8 +36,8 @@ public class MyIntentService extends IntentService {
         if (intent != null) {
             final String action = intent.getAction();
             if (ACTION_START.equals(action)) {
-                final String param1 = intent.getStringExtra(EXTRA_PARAM1);
-                handleActionFoo(param1);
+                final long millis = intent.getLongExtra(EXTRA_PARAM_WORK_LENGHT, 0L);
+                handleActionFoo(millis);
             }
         }
     }
@@ -45,8 +46,14 @@ public class MyIntentService extends IntentService {
      * Handle action Start in the provided background thread with the provided
      * parameters.
      */
-    private void handleActionFoo(String param1) {
-        throw new UnsupportedOperationException("Not yet implemented");
+    private void handleActionFoo(long millis) {
+        try {
+            Log.d(TAG, "Lavoro in background iniziato...");
+            Thread.sleep(millis);
+            Log.d(TAG, "Lavoro completato!");
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
 }
