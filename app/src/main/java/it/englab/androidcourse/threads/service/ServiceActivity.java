@@ -30,7 +30,7 @@ public class ServiceActivity extends AppCompatActivity {
     }
 
     private void startServiceANR() {
-        MyService.startCommandAnrStart(this);
+        MyService.startCommandAnrStart(ServiceActivity.this);
     }
 
     private void startIntentService() {

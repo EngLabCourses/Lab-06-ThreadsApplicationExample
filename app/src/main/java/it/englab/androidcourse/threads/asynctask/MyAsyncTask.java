@@ -10,16 +10,16 @@ import android.util.Log;
 class MyAsyncTask extends AsyncTask<Integer, Integer, String> {
 
     private static final String TAG = MyAsyncTask.class.getName();
-    private Callaback mCallaback;
+    private Callback mCallback;
 
-    interface Callaback {
+    interface Callback {
         void onTaskProgressing(int progress);
 
         void onTaskComplete(String status);
     }
 
-    MyAsyncTask(Callaback callaback) {
-        mCallaback = callaback;
+    MyAsyncTask(Callback callback) {
+        mCallback = callback;
     }
 
     @Override
@@ -30,7 +30,7 @@ class MyAsyncTask extends AsyncTask<Integer, Integer, String> {
     @Override
     protected void onProgressUpdate(Integer... values) {
         Log.d(TAG, "Progress..." + values[0]);
-        mCallaback.onTaskProgressing(values[0]);
+        mCallback.onTaskProgressing(values[0]);
     }
 
     @Override
@@ -53,12 +53,12 @@ class MyAsyncTask extends AsyncTask<Integer, Integer, String> {
 
     @Override
     protected void onPostExecute(String s) {
-        mCallaback.onTaskComplete(s);
+        mCallback.onTaskComplete(s);
     }
 
     @Override
     protected void onCancelled() {
-        mCallaback = null;
+        mCallback = null;
         super.onCancelled();
     }
 

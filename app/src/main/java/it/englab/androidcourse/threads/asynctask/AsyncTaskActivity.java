@@ -9,7 +9,7 @@ import android.widget.Toast;
 
 import it.englab.androidcourse.threads.R;
 
-public class AsyncTaskActivity extends AppCompatActivity implements MyAsyncTask.Callaback {
+public class AsyncTaskActivity extends AppCompatActivity implements MyAsyncTask.Callback {
 
     private static final String TAG = AsyncTaskActivity.class.getName();
     private static final int MAX_ITERATIONS = 15;
@@ -50,6 +50,7 @@ public class AsyncTaskActivity extends AppCompatActivity implements MyAsyncTask.
     @Override
     protected void onDestroy() {
         mMyAsyncTask = null;
+        Log.d(TAG, "onDestroy");
         super.onDestroy();
     }
 
