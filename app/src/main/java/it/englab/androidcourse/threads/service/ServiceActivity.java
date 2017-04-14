@@ -17,8 +17,8 @@ public class ServiceActivity extends AppCompatActivity {
         findViewById(R.id.button_start_thread).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startServiceANR();
-                //startIntentService();
+                //startServiceANR();
+                startIntentService();
             }
         });
         findViewById(R.id.button_secondary).setOnClickListener(new View.OnClickListener() {

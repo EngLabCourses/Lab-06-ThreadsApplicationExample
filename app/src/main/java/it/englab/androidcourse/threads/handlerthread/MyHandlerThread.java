@@ -15,6 +15,7 @@ public class MyHandlerThread extends HandlerThread {
     private Handler mHandler;
 
     public MyHandlerThread() {
+
         super("MyHandlerThread", Process.THREAD_PRIORITY_BACKGROUND);
     }
 

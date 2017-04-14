@@ -14,7 +14,7 @@ public class MyService extends Service {
 
     public MyService() {
     }
-    
+
     public static void startCommandAnrStart(Context context) {
         Intent intent = new Intent(context, MyService.class);
         intent.putExtra(MyService.COMMAND_KEY, MyService.COMMAND_ANR_START);

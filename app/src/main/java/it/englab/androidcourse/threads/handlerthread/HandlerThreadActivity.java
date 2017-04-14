@@ -28,7 +28,7 @@ public class HandlerThreadActivity extends AppCompatActivity {
 
     @Override
     protected void onDestroy() {
-        //mMyHandlerThread.quit();
+        mMyHandlerThread.quit();
         super.onDestroy();
     }
 }

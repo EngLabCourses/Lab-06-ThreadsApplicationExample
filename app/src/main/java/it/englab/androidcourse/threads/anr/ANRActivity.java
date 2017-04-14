@@ -32,7 +32,7 @@ public class ANRActivity extends AppCompatActivity {
 
     private void anrExample() {
         try {
-            Thread.sleep(20000);
+            Thread.sleep(5000);
             Toast.makeText(getApplicationContext(), "Il nostro fantastico codice ha finito!", Toast.LENGTH_SHORT).show();
         } catch (InterruptedException e) {
             e.printStackTrace();

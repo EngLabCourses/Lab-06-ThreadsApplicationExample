@@ -35,8 +35,14 @@ public class ThreadActivity extends AppCompatActivity {
             @Override
             public void run() {
                 try {
-                    Thread.sleep(15000);
-                    Toast.makeText(getApplicationContext(), "Il nostro fantastico codice ha finito!", Toast.LENGTH_SHORT).show();
+                    Thread.sleep(5000);
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            Toast.makeText(getApplicationContext(), "Il nostro fantastico codice ha finito!", Toast.LENGTH_SHORT).show();
+                        }
+                    });
+
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
